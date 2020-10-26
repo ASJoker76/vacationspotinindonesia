@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>MONAS (MONUMEN NASIONAL)</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="css/reset.css" type="text/css" media="all">
+<link rel="stylesheet" href="css/layout.css" type="text/css" media="all">
+<link rel="stylesheet" href="css/style.css" type="text/css" media="all">
+<link rel="stylesheet" href="css/slide.css" type="text/css"  media="all">
+<script type="text/javascript" src="js/jquery-1.4.2.js" ></script>
+<script type="text/javascript" src="js/cufon-yui.js"></script>
+<script type="text/javascript" src="js/cufon-replace.js"></script>  
+<script type="text/javascript" src="js/Myriad_Pro_600.font.js"></script>
+<!--[if lt IE 9]>
+	<script type="text/javascript" src="http://info.template-help.com/files/ie6_warning/ie6_script_other.js"></script>
+	<script type="text/javascript" src="js/html5.js"></script>
+<![endif]-->
+<script>
+	function semua()
+	{
+		var objResTree = document.all['transformedXML'];
+		var objSrcTree = new ActiveXObject('MSXML2.DOMDocument.6.0');
+		var objXSLT = new ActiveXObject('MSXML2.DOMDocument.6.0');
+
+		objSrcTree.load('xml/feedback.xml');
+		objXSLT.load('xml/feedback.xsl');
+
+		strResult=objSrcTree.transformNode(objXSLT);
+		objResTree.innerHTML = strResult;
+		return true;
+	}
+
+	function loadrajaampat()
+	{
+		var objResTree = document.all['transformedXML2'];
+		var objSrcTree = new ActiveXObject('MSXML2.DOMDocument.6.0');
+		var objXSLT = new ActiveXObject('MSXML2.DOMDocument.6.0');
+
+		objSrcTree.load('xml/Pulau.xml');
+		objXSLT.load('xml/monas.xsl');
+
+		strResult=objSrcTree.transformNode(objXSLT);
+		objResTree.innerHTML = strResult;
+		return true;
+	}	
+
+	function validasi(e)
+	{
+			x=document.contact;
+
+			name=x.txtname.value;
+			
+			email=x.txtmail.value;	
+
+			Comment=x.txtcomment.value;
+
+			if(name.length==0)
+			{
+				alert("Please fill your name.");
+				x.txtname.focus();
+				return false;
+			}
+			else if(email.length==0)
+			{
+				alert("Please fill your Email.");
+				x.txtmail.focus();
+				return false;
+			}
+			else if (email==-1) 
+			{
+				alert("Invalid Email Address");
+				x.txtmail.focus();
+				return false;
+			}
+			else if (Comment==0)
+			{
+				alert("please fill your feedback");
+				x.txtcomment.focus();
+				return false;
+			}
+			var xml = new ActiveXObject('MSXML2.DOMDocument.6.0');
+            xml.load('F:/Vocation-spot-in-indonesia/xml/feedback.xml');
+
+            var rootElement = xml.getElementsByTagName('Feedbackdata')[0];
+            var newElement   = xml.createElement('Feedback');
+            rootElement.appendChild(newElement);
+
+            var attribute = xml.createAttribute("ID_Feedback");
+            var id =  rootElement.childNodes.length + 1;
+            if (id < 10)
+            	id = 'F00' +id;
+            else 
+            	id = 'F0' + id
+            attribute.value = id;
+            newElement.setAttributeNode(attribute);
+            
+            var nodeNama = xml.createElement('name');
+            nodeNama.appendChild(xml.createTextNode(name));
+            newElement.appendChild(nodeNama);
+
+            var nodeEmail = xml.createElement('email');
+            nodeEmail.appendChild(xml.createTextNode(email));
+            newElement.appendChild(nodeEmail);
+
+            var nodeComment = xml.createElement('comment');
+            nodeComment.appendChild(xml.createTextNode(Comment));
+            newElement.appendChild(nodeComment);
+
+            rootElement.appendChild(newElement);
+
+            var fs = new ActiveXObject('Scripting.FileSystemObject');
+            var file = fs.CreateTextFile('F:/Vocation-spot-in-indonesia/xml/feedback.xml', true);
+            file.write(xml.xml);
+            file.close();
+	}
+</script>
+</head>
+<body id="page1" onload="semua() && loadrajaampat();">
+<div class="extra">
+	<div class="main">
+<!-- header -->
+		<header>
+			<div class="wrapper">
+				<h1><a href="index.html" id="logo">Around the World</a></h1>
+				<div class="right">
+					
+				</div>
+			</div>
+			<nav>
+				<ul id="menu">
+					<li><a href="index.html" class="nav1">Home</a></li>
+					<li><a href="About.html" class="nav2">About Us </a></li>
+					<li><a href="Gallery.html" class="nav3">Gallery</a></li>
+					<li><a href="Advice.html" class="nav4">Advice / Tips</a></li>
+					<li class="end"><a href="Contacts.html" class="nav5">Contacts</a></li>
+				</ul>
+			</nav>
+			<article class="col1 pad_left1">
+				<div id=slidercontainer>
+					 <div id=css3slider>
+					    <img src="images/monas1.jpg" alt="" href="#">
+					  	<img src="images/monas2.jpg" alt="" href="#">
+					  	<img src="images/monas3.jpg" alt="" href="#">
+					  	<img src="images/monas4.jpg" alt="" href="#">
+					  </div>
+				</div>
+			</article>
+			<article class="col1 pad_left1">
+				
+			</article>
+			<!--<div class="img"><img src="images/img3.jpg" alt=""></div>-->
+		</header><div class="ic">More Website Templates at TemplateMonster.com!</div>
+<!-- / header -->
+<!-- content -->
+		<section id="content">
+		<h2>MONAS (MONUMEN NASIONAL)</h2>
+				
+		<figure class="left marg_right1"></figure>
+		<div style="text-align: justify;">
+
+		<div id='transformedXML2'></div>
+
+		<br><br><br><hr>
+
+		</div>
+		<h2>COMMENT</h2>
+		<div id='transformedXML'></div>
+
+			<article class="col1 pad_right1">
+				<h2>FeedBack</h2>
+				<form name="contact" method="post" id="ContactForm" onsubmit="return validasi()">
+					<div>
+						<div class="wrapper"><input type="text" name="txtname" class="input" >Name:<br/></div>
+						<div class="wrapper"><input type="text" name="txtmail" class="input" >E-mail:<br/></div>
+						<div class="wrapper"><textarea name="txtcomment" cols="1" rows="1"></textarea>Message:<br/></div>
+						<input type="Submit" value="Submit" class="button">
+						<input type="reset" value="Reset" class="button">
+					</div>
+				</form>
+        	</article>
+
+		</section>
+
+
+<!-- / content -->
+	</div>
+	<div class="block">
+		
+	</div>
+</div>
+<div class="body1">
+	<div class="main">
+<!-- footer -->
+		<footer>
+			Website Around The World designed by Agus and Ghofar<br>
+			3D Models provided by WEBKU
+		</footer>
+<!-- / footer -->
+	</div>
+</div>
+<script type="text/javascript"> Cufon.now(); </script>
+</body>
+</script>
+</html>

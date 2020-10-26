@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:stud="http://www.around-the-world.com/"
+    targetNamespace="http://www.around-the-world.com/" elementFormDefault="qualified" >
+    <xsd:simpleType name="JawID">
+        <xsd:restriction base="xsd:string">
+            <xsd:length  value="4"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="SumID">
+        <xsd:restriction base="xsd:string">
+            <xsd:length  value="4"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="PapID">
+        <xsd:restriction base="xsd:string">
+            <xsd:length  value="4"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="KalID">
+        <xsd:restriction base="xsd:string">
+            <xsd:length  value="4"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="SulID">
+        <xsd:restriction base="xsd:string">
+            <xsd:length  value="4"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="PulauID">
+        <xsd:restriction base="xsd:string">
+            <xsd:length value="4"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+</xsd:schema>

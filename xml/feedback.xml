@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<Feedbackdata xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="file:/F:/Vocation-spot-in-indonesia/xml/feedback.xsd">
+	<Feedback ID_Feedback="F001">
+		<name>Agus</name>
+		<email>agus@gmail.com</email>
+		<comment>I like it</comment>
+	</Feedback>
+	<Feedback ID_Feedback="F003"><name>bagus</name><email>bgs@gmail.com</email><comment>bagus</comment></Feedback><Feedback ID_Feedback="F004"><name>nila</name><email>nil@gmail.com</email><comment>wonderfull</comment></Feedback><Feedback ID_Feedback="F005"><name>zulfi</name><email>zul@gmail.com</email><comment>great</comment></Feedback><Feedback ID_Feedback="F006"><name>satria</name><email>sat@gmail.com</email><comment>bagus</comment></Feedback><Feedback ID_Feedback="F007"><name>tika</name><email>tikjaw@gmail.com</email><comment>keren</comment></Feedback></Feedbackdata>

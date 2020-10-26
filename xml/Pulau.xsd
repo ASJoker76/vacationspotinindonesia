@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:pu ="http://www.around-the-world.com/"
+    targetNamespace="http://www.around-the-world.com/"
+    elementFormDefault="qualified">
+    <xsd:include schemaLocation="validasi.xsd"/>
+    <xsd:element name="all-pulau" type="pu:dt_pulau"/>
+    <xsd:complexType name="dt_pulau">
+        <xsd:sequence>
+            <xsd:element  name="DetailPulau"  type="pu:ppulau" maxOccurs="unbounded" minOccurs="1"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    
+    
+    <xsd:complexType name="ppulau">
+        <xsd:sequence>
+            <xsd:element name="Nama_pulau" type="xsd:string" maxOccurs="1"/>
+            <xsd:element name="Name_tempat" type="xsd:string" maxOccurs="1"/>
+            <xsd:element name="Small-Description" type="xsd:string" maxOccurs="1"/>
+            <xsd:element name="Description" type="xsd:string" maxOccurs="1"/>
+            <xsd:element name="Last-Description" type="xsd:string" maxOccurs="1"/>
+            <xsd:element name="Image"       type="xsd:string" maxOccurs="1"/>
+        </xsd:sequence>
+        <xsd:attribute name="ID_PPulau" type="pu:PulauID" use="required"/>
+    </xsd:complexType>
+</xsd:schema>

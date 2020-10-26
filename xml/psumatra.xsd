@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:pu ="http://www.around-the-world.com/"
+    targetNamespace="http://www.around-the-world.com/"
+    elementFormDefault="qualified">
+    <xsd:include schemaLocation="validasi.xsd"/>
+    <xsd:element name="Pulau_sumatra" type="pu:dt_sumatra"/>
+    <xsd:complexType name="dt_sumatra">
+        <xsd:sequence>
+            <xsd:element  name="PulauSumatra"  type="pu:psumatra" maxOccurs="unbounded" minOccurs="1"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    
+    
+    <xsd:complexType name="psumatra">
+        <xsd:sequence>
+            <xsd:element name="Name_tempat" type="xsd:string" maxOccurs="1"/>
+            <xsd:element name="Small-Description" type="xsd:string" maxOccurs="1"/>
+            <xsd:element name="Description" type="xsd:string" maxOccurs="1"/>
+            <xsd:element name="Last-Description" type="xsd:string" maxOccurs="1"/>
+            <xsd:element name="Image"       type="xsd:string" maxOccurs="1"/>
+        </xsd:sequence>
+        <xsd:attribute name="ID_PSumatra" type="pu:SumID" use="required"/>
+    </xsd:complexType>
+</xsd:schema>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Home</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="css/reset.css" type="text/css" media="all">
+<link rel="stylesheet" href="css/layout.css" type="text/css" media="all">
+<link rel="stylesheet" href="css/style.css" type="text/css" media="all">
+<link rel="stylesheet" href="css/slide.css" type="text/css"  media="all">
+<script type="text/javascript" src="js/jquery-1.4.2.js" ></script>
+<script type="text/javascript" src="js/cufon-yui.js"></script>
+<script type="text/javascript" src="js/cufon-replace.js"></script>  
+<script type="text/javascript" src="js/Myriad_Pro_600.font.js"></script>
+<!--[if lt IE 9]>
+	<script type="text/javascript" src="http://info.template-help.com/files/ie6_warning/ie6_script_other.js"></script>
+	<script type="text/javascript" src="js/html5.js"></script>
+<![endif]-->
+<script>
+	function semua()
+	{
+		var objResTree = document.all['transformedXML'];
+		var objSrcTree = new ActiveXObject('MSXML2.DOMDocument.6.0');
+		var objXSLT = new ActiveXObject('MSXML2.DOMDocument.6.0');
+
+		objSrcTree.load('xml/Pulau.xml');
+		objXSLT.load('xml/papua-col.xsl');
+
+		strResult=objSrcTree.transformNode(objXSLT);
+		objResTree.innerHTML = strResult;
+		return true;
+	}
+</script>
+</head>
+<body id="page1" onload="semua();">
+<div class="extra">
+	<div class="main">
+<!-- header -->
+		<header>
+			<div class="wrapper">
+				<h1><a href="index.html" id="logo">Around the World</a></h1>
+				<div class="right">
+					
+				</div>
+			</div>
+			<nav>
+				<ul id="menu">
+					<li><a href="index.html" class="nav1">Home</a></li>
+					<li><a href="About.html" class="nav2">About Us </a></li>
+					<li><a href="Gallery.html" class="nav3">Gallery</a></li>
+					<li><a href="Advice.html" class="nav4">Advice / Tips</a></li>
+					<li class="end"><a href="Contacts.html" class="nav5">Contacts</a></li>
+				</ul>
+			</nav>
+			<article class="col1">
+				<ul class="tabs">
+					<li><a href="index.html">Jawa</a></li>
+					<li><a href="Sumatra.html">Sumatra</a></li>
+					<li><a href="Kalimantan.html">Kalimantan</a></li>
+					<li class="end"><a href="#" class="active">Papua</a></li>
+				</ul>
+				<div class="tabs_cont">
+					<form id="form_1" action="" method="post">
+						<li><a href="biak-island.html" class="active">Biak Island</a></li>
+						<li><a href="wafsarak-waterfall.html">Wafsarak Waterfall</a></li>
+						<li><a href="raja-ampat.html">Raja Ampat Island</a></li>
+						<!--<div class="bg">
+							<div class="wrapper">
+								<div class="radio">
+									<input type="radio" name="name1" checked>Round trip
+								</div>
+								<div class="radio"><input type="radio" name="name1">One way</div>
+							</div>
+							<a href="#">Multiple destinations</a>
+							<div class="wrapper"><input type="text" class="input">From</div>
+							<div class="wrapper"><input type="text" class="input">To</div>	
+							<div class="wrapper check_box"><input type="checkbox" checked ><a href="#">Search nearby airports</a></div>	
+							<div class="wrapper"><input type="text" class="input input2" value="04/11/2010"  onblur="if(this.value=='') this.value='04/11/2010'" onfocus="if(this.value =='04/11/2010' ) this.value=''">Depart (mm/dd/yy)</div>
+							<div class="wrapper pad_bot1"><input type="text" class="input input2" value="04/11/2010"  onblur="if(this.value=='') this.value='04/11/2010'" onfocus="if(this.value =='04/11/2010' ) this.value=''">Return  (mm/dd/yy)</div>
+							<div class="wrapper">
+								<div class="radio"><input type="radio" name="name2" checked>Economy cabin</div>
+								<div class="radio end"><input type="radio" name="name2">Business</div>
+							</div>
+							<div class="wrapper pad_bot1">
+								<a href="#" class="button" onclick="document.getElementById('form_1').submit()">Search</a>
+								Audlts <select><option>1</option></select>
+							</div>
+						</div>-->							
+					</form>
+				</div>
+			</article>
+			<article class="col1 pad_left1">
+				<div id=slidercontainer>
+					 <div id=css3slider>
+					    <img src="images/biak-island4.jpg" alt="luang-prabang" href="#">
+					  	<img src="images/raja_ampat.jpg" alt="halong_bay" href="#">
+					  	<img src="images/wafsarak-waterfall2.jpg" alt="candi-borobudur" href="#">
+					  	<img src="images/Wisata Raja Ampat.jpg" alt="gili-trawang" href="#">
+					  </div>
+					<!--<img src="images/text1.jpg" alt="">
+					<h2>The Best Offers</h2>
+					<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore.</p>
+					<a href="#" class="button">Read More</a>-->
+				</div>
+			</article>
+			<!--<div class="img"><img src="images/img3.jpg" alt=""></div>-->
+		</header><div class="ic">More Website Templates at TemplateMonster.com!</div>
+<!-- / header -->
+<!-- content -->
+		<section id="content">
+			<article class="col1 right">
+				<h3></h3>
+				<div class="pad">
+					<div class="wrapper under">
+						<img width="200" height="459" src="images/z.png"><br>
+						Read More<a href="biak-island.html" class="marker_2"><img src="images/marker_1.gif"></a>
+					</div>
+					<div class="wrapper under">
+						<img width="200" height="385" src="images/z.png"><br>
+						Read More<a href="wafsarak-waterfall.html" class="marker_2"><img src="images/marker_1.gif"></a>
+					</div>
+					<div class="wrapper under">
+						<img width="200" height="435" src="images/z.png"><br>
+						Read More<a href="raja-ampat.html" class="marker_2"><img src="images/marker_1.gif"></a>
+					</div>
+				</div>
+       		</article>
+			<article class="col2 pad_left1">
+				<h2>PAPUA DESTINATION</h2>
+				<div id='transformedXML'></div>
+					<!--<figure class="left marg_right1"><img src="images/page1_img7.jpg" alt=""></figure>
+					<p class="pad_bot2"><strong>Siem Reap, Kamboja</strong></p>
+					<p class="pad_bot2">Watch the sunrise views are stunning in Siem Reap when the morning sun touched the temples and ruins of Angkor Wat. The ancient building is located in one of the largest religious complex in the world. </p>
+					<p class="pad_bot2">The complex and the royal city of Angkor Thom 12th century is considered as the main reason for visiting Siem Reap.</p>
+					<a href="#" class="marker_2"></a>
+				</div>
+				<div class="wrapper">
+					<figure class="left marg_right1"><img src="images/page1_img8.jpg" alt=""></figure>
+					<p class="pad_bot2"><strong>Hanoi, Vietnam</strong></p>
+					<p class="pad_bot2">The capital of Vietnam is developing very well, preserving the Old City area, monuments and colonial architecture, while leaving room for modern development.</p>
+					<p class="pad_bot2">Hanoi may have to get rid of a lot of old names, including Thang Long, or "flying dragon", but</p>
+					<a href="#" class="marker_2"></a>-->
+				
+       		</article>
+		</section>
+<!-- / content -->
+	</div>
+	<div class="block"></div>
+</div>
+<div class="body1">
+	<div class="main">
+<!-- footer -->
+		<footer>
+			Website Around The World designed by Agus and Ghofar<br>
+			3D Models provided by WEBKU
+		</footer>
+<!-- / footer -->
+	</div>
+</div>
+<script type="text/javascript"> Cufon.now(); </script>
+</body>
+</html>

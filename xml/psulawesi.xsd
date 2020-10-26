@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:pu ="http://www.around-the-world.com/"
+    targetNamespace="http://www.around-the-world.com/"
+    elementFormDefault="qualified">
+    <xsd:include schemaLocation="validasi.xsd"/>
+    <xsd:element name="Pulau_sulawesi" type="pu:dt_sulawesi"/>
+    <xsd:complexType name="dt_sulawesi">
+        <xsd:sequence>
+            <xsd:element  name="PulauSulawesi"  type="pu:psulawesi" maxOccurs="unbounded" minOccurs="1"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    
+    
+    <xsd:complexType name="psulawesi">
+        <xsd:sequence>
+            <xsd:element name="Name_tempat" type="xsd:string" maxOccurs="1"/>
+            <xsd:element name="Description" type="xsd:string" maxOccurs="1"/>
+            <xsd:element name="Image"       type="xsd:string" maxOccurs="1"/>
+        </xsd:sequence>
+        <xsd:attribute name="ID_PSulawesi" type="pu:SulID" use="required"/>
+    </xsd:complexType>
+</xsd:schema>

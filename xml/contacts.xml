@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="contacts.xsl"?>
+<Contact xmlns="http://www.around-the-world.com/Contacts"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.around-the-world.com/Contacts file:/F:/Kuliah/Q3/Project%20HTML/Around%20The%20World/xml/contacts.xsd">
+    <autors>
+        <Name>Agus Setiawan</Name>
+        <Phone-no>08971729681</Phone-no>
+        <Email>agussmata76@gmail.com</Email>
+        <Photo>images/agus.jpg</Photo>
+    </autors>
+    <autors>
+        <Name>Muhammad Abdul Ghofar</Name>
+        <Phone-no>085770594768</Phone-no>
+        <Email>Abdulghofarmuhammad@gmail.com</Email>
+        <Photo>images/ghofar.jpg</Photo>
+    </autors>
+</Contact>
